@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Default || Nuron - NFT Marketplace Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/images/favicon.png')}}">
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/vendor/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/vendor/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/vendor/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/vendor/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/plugins/feature.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/plugins/jquery-ui.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/vendor/odometer.css')}}">
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/style.css')}}">
+
+</head>
+
+<body class="template-color-1 nft-body-connect">
+    <!-- start header area -->
+    <!-- Start Header -->
+    <header class="rn-header haeder-default header--sticky">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-left">
+                    <div class="logo-thumbnail logo-custom-css">
+                        <a class="logo-light" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                        <a class="logo-dark" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                    </div>
+                    <div class="mainmenu-wrapper">
+                        <nav id="sideNav" class="mainmenu-nav d-none d-xl-block">
+                            <!-- Start Mainmanu Nav -->
+                            <ul class="mainmenu">
+                                <li class="has-droupdown has-menu-child-item">
+                                    <a href="home">Home</a>
+                                </li>
+                                <li><a href="about">About</a>
+                                </li>
+                                <li class="with-megamenu">
+                                    <a href="#">Account</a>
+                                    <div class="rn-megamenu">
+                                        <div class="wrapper">
+                                            <div class="row row--0">
+                                                <div class="col-lg-3 single-mega-item">
+                                                </div>
+                                                <div class="col-lg-3 single-mega-item">
+                                                    <ul class="mega-menu-item">
+                                                        <li><a href="login">Log In <i data-feather="log-in"></i></a></li>
+                                                        <li><a href="register">Registration <i data-feather="user-plus"></i></a></li>
+                                                        <!-- <li><a href="forget.html">Forget Password <i data-feather="key"></i></a></li> -->
+                                                        <li>
+                                                            <a href="author.html">Author/Profile(User) <i data-feather="user"></i></a>
+                                                        </li>
+                                                        <!-- <li>
+                                                            <a href="connect.html">Connect to Wallet <i data-feather="pocket"></i></a>
+                                                        </li>
+                                                        <li><a href="privacy-policy.html">Privacy Policy <i data-feather="file-text"></i></a></li>
+                                                        <li><a href="newsletter.html">Newsletter<i data-feather="book-open"></i></a></li>
+                                                    </ul> -->
+                                                </div>
+                                                <div class="col-lg-3 single-mega-item">
+                                                </div>
+                                                <div class="col-lg-3 single-mega-item">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="contact">Contact</a></li>
+                                <li><a href="referral">Referral</a>
+                            </ul>
+                            <!-- End Mainmanu Nav -->
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="setting-option d-none d-lg-block">
+                        <form class="search-form-wrapper" action="#">
+                            <input type="search" placeholder="Search Here" aria-label="Search">
+                            <div class="search-icon">
+                                <button><i class="feather-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="setting-option rn-icon-list d-block d-lg-none">
+                        <div class="icon-box search-mobile-icon">
+                            <button><i class="feather-search"></i></button>
+                        </div>
+                        <form id="header-search-1" action="#" method="GET" class="large-mobile-blog-search">
+                            <div class="rn-search-mobile form-group">
+                                <button type="submit" class="search-button"><i class="feather-search"></i></button>
+                                <input type="text" placeholder="Search ...">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="setting-option header-btn rbt-site-header" id="rbt-site-header">
+                        <!-- <div class="icon-box">
+                            <a id="connectbtn" class="btn btn-primary-alta btn-small" href="connect.html">Wallet connect</a>
+                        </div> -->
+                    </div>
+
+                    <div class="setting-option rn-icon-list notification-badge">
+                        <div class="icon-box">
+                            <a href="#" onclick="goToCart()"><i class="fa fa-shopping-cart"></i><span id="cart-badge" class="badge">0</span></a>
+                        </div>
+                    </div>
+
+                    <div class="header_admin" id="header_admin">
+                        <div class="setting-option rn-icon-list user-account">
+                            <div class="icon-box">
+                                <a href="author.html"><img src="{{url_for('static',filename='assets/images/icons/boy-avater.png')}}" alt="Images"></a>
+                                <div class="rn-dropdown">
+                                    <div class="rn-inner-top">
+                                        <h4 class="title"><a href="product-details.html">Christopher William</a></h4>
+                                        <span><a href="#">Set Display Name</a></span>
+                                    </div>
+                                    <div class="rn-product-inner">
+                                        <ul class="product-list">
+                                            <li class="single-product-list">
+                                                <div class="thumbnail">
+                                                    <a href="product-details.html"><img src="assets/images/portfolio/nftToken3" alt="Nft Product Images"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="title"><a href="product-details.html">Balance</a></h6>
+                                                    <span class="price">25 ETH</span>
+                                                </div>
+                                                <div class="button"></div>
+                                            </li>
+                                            <li class="single-product-list">
+                                                <div class="thumbnail">
+                                                    <a href="product-details.html"><img src="assets/images/portfolio/" alt="Nft Product Images"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="title"><a href="product-details.html">Balance</a></h6>
+                                                    <span class="price">25 ETH</span>
+                                                </div>
+                                                <div class="button"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="add-fund-button mt--20 pb--20">
+                                        <a class="btn btn-primary-alta w-100" href="connect.html">Add Your More Funds</a>
+                                    </div>
+                                    <ul class="list-inner">
+                                        <li><a href="author.html">My Profile</a></li>
+                                        <li><a href="edit-profile.html">Edit Profile</a></li>
+                                        <li><a href="connect.html">Manage funds</a></li>
+                                        <li><a href="login.html">Sign Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="setting-option mobile-menu-bar d-block d-xl-none">
+                        <div class="hamberger">
+                            <button class="hamberger-button">
+                                <i class="feather-menu"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="my_switcher" class="my_switcher setting-option">
+                        <ul>
+                            <li>
+                                <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                                    <img class="sun-image" src="{{url_for('static',filename='assets/images/icons/sun-01.svg')}}" alt="Sun images">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                                    <img class="Victor Image" src="{{url_for('static',filename='assets/images/icons/vector.svg')}}" alt="Vector Images">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <div class="popup-mobile-menu">
+        <div class="inner">
+            <div class="header-top">
+                <div class="logo logo-custom-css">
+                    <a class="logo-light" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                    <a class="logo-dark" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                </div>
+                <div class="close-menu">
+                    <button class="close-button">
+                        <i class="feather-x"></i>
+                    </button>
+                </div>
+            </div>
+            <nav>
+                <!-- Start Mainmanu Nav -->
+                <ul class="mainmenu">
+                    <li class="has-droupdown">
+                        <a href="home">Home</a>
+                    </li>
+                    <li><a href="about">About</a>
+                    </li>
+                    <li class="with-megamenu">
+                        <a class="nav-link its_new" href="#">Account</a>
+                        <div class="rn-megamenu">
+                            <div class="wrapper">
+                                <div class="row row--0">
+                                    <div class="col-lg-3 single-mega-item">
+                                    </div>
+                                    <div class="col-lg-3 single-mega-item">
+                                        <ul class="mega-menu-item">
+                                            <li><a href="login">Log In <i data-feather="log-in"></i></a></li>
+                                            <li><a href="register">Sign Up <i data-feather="user-plus"></i></a></li>
+                                            <li>
+                                                <a href="author.html">Author/Profile(User) <i data-feather="user"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 single-mega-item">
+                                        <ul class="mega-menu-item">
+
+                                            <li><a href="product">Product<i data-feather="folder"></i></a></li>
+                                            <li><a href="product-details.html">Product Details <i data-feather="layout"></i></a></li>
+                                            <li><a href="ranking.html">NFT Ranking<i data-feather="trending-up"></i></a></li>
+                                            <li><a href="blog.html">Our News <i data-feather="message-square"></i></a></li>
+                                            <li><a href="blog-details.html">Blog Details<i data-feather="book-open"></i></a></li>
+                                            <li><a href="404.html">404 <i data-feather="alert-triangle"></i></a></li>
+                                            <li><a href="forum-community.html">Forum & Community<i data-feather="message-circle"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 single-mega-item">
+                                        <ul class="mega-menu-item">
+                                            <li><a href="about">About Us<i data-feather="award"></i></a></li>
+                                            <li><a href="contact">Contact <i data-feather="headphones"></i></a></li>
+                                            <li><a href="support.html">Support/FAQ <i data-feather="help-circle"></i></a></li>
+                                            <li><a href="terms-condition.html">Terms & Condition <i data-feather="list"></i></a></li>
+                                            <li><a href="coming-soon.html">Coming Soon <i data-feather="clock"></i></a></li>
+                                            <li><a href="maintenance.html">Maintenance <i data-feather="cpu"></i></a></li>
+                                            <li><a href="forum-details.html">Forum Details <i data-feather="message-circle"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-droupdown has-menu-child-item">
+                        <a class="nav-link its_new" href="blog.html">Blog</a>
+                        <ul class="submenu">
+                            <li><a href="blog-single-col.html">Blog Single Column<i class="feather-fast-forward"></i></a></li>
+                            <li><a href="blog-col-two.html">Blog Two Column<i class="feather-fast-forward"></i></a></li>
+                            <li><a href="blog-col-three.html">Blog Three Column<i class="feather-fast-forward"></i></a></li>
+                            <li><a href="blog.html">Blog Four Column<i class="feather-fast-forward"></i></a></li>
+                            <li><a href="blog-details.html">Blog Details<i class="feather-fast-forward"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+                <!-- End Mainmanu Nav -->
+            </nav>
+        </div>
+    </div>
+    <!-- ENd Header Area -->
+
+    <!-- start banner area -->
+    <div class="slider-one rn-section-gapTop">
+        <div class="container">
+            <div class="row row-reverce-sm align-items-center">
+                <div class="col-lg-5 col-md-6 col-sm-12 mt_sm--50">
+                    <h2 class="title" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800"> Collect and Sell Your Specific NFTs.</h2>
+                    <p class="slide-disc" data-sal-delay="300" data-sal="slide-up" data-sal-duration="800">Partner with one of the world’s largest retailers to showcase your brand and
+                        products.</p>
+                    <div class="button-group">
+                        <a class="btn btn-large btn-primary" href="#" data-sal-delay="400" data-sal="slide-up" data-sal-duration="800">Get Started</a>
+                        <a class="btn btn-large btn-primary-alta" href="create.html" data-sal-delay="500" data-sal="slide-up" data-sal-duration="800">Create</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 offset-lg-1">
+                    <div class="slider-thumbnail">
+                        <img src="{{url_for('static',filename='assets/images/slider/nftImage.jpg')}}" alt="Slider Images">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End banner area -->
+
+    <!-- Explore Style Carousel -->
+    <div class="rn-live-bidding-area rn-section-gapTop">
+        
+    </div>
+    <!-- Explore Style Carousel End-->
+
+    <!-- start service area -->
+    <div class="rn-service-area rn-section-gapTop">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb--50">
+                    <h3 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Create and sell your NFTs</h3>
+                </div>
+            </div>
+            <div class="row g-5">
+                <!-- start single service -->
+                <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="rn-service-one color-shape-7">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="{{url_for('static',filename='assets/images/icons/shape-7.png')}}" alt="Shape">
+                            </div>
+                            <div class="subtitle">Step-01</div>
+                            <div class="content">
+                                <h4 class="title"><a href="register">Register Yourself</a></h4>
+                                <p class="description"></p>
+                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <a class="over-link" href="#"></a>
+                    </div>
+                </div>
+                <!-- End single service -->
+                <!-- start single service -->
+                <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800" class="rn-service-one color-shape-1">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="assets/images/icons/shape-1.png" alt="Shape">
+                            </div>
+                            <div class="subtitle">Step-02</div>
+                            <div class="content">
+                                <h4 class="title"><a href="#">Purchase & Create your collection</a></h4>
+                                <p class="description"></p>
+                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <a class="over-link" href="#"></a>
+                    </div>
+                </div>
+                <!-- End single service -->
+                <!-- start single service -->
+                <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800" class="rn-service-one color-shape-5">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="assets/images/icons/shape-5.png" alt="Shape">
+                            </div>
+                            <div class="subtitle">Step-03</div>
+                            <div class="content">
+                                <h4 class="title"><a href="#">Add your NFT's</a></h4>
+                                <p class="description"></p>
+                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <a class="over-link" href="#"></a>
+                    </div>
+                </div>
+                <!-- End single service -->
+                <!-- start single service -->
+                
+                <!-- End single service -->
+            </div>
+        </div>
+    </div>
+    <!-- End service area -->
+    <!-- New items Start -->
+    <div class="rn-new-items rn-section-gapTop">
+        <div class="container">
+            <div class="row mb--50 align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">NFT's</h3>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
+                    <div class="view-more-btn text-start text-sm-end" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                        <a button class="btn-transparent" id="buy-now-button">Available Slots</button><i data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div> 
+            <div class="row g-5">
+                <div id="boxes" class="">
+                    {% for x in range(j) %}
+                        <div class="row">
+                            {% for y in range(i) %}
+                                {% set box_id = x * i + y + 1 %}
+                                <div class="box col-md-6 col-lg-4" id="box{{ x * i + y + 1 }}">
+                                    <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800" class="product-style-one no-overlay">
+                                        <div class="card-thumbnail">
+                                            {% if 'box' + str(box_id) + '.jpg' in images %}
+                                                <img src="{{url_for('static',filename='images/box' + str(box_id) + '.jpg')}}" width=760px height=480px/>
+                                            {% else %}
+                                                <h2>   Slot {{ box_id }}  </h2>
+                                                <style> h2{text-align:center;} </style>
+                                                <button class="button" onclick="toggleCart({{ box_id }})" style="background-color:#008000;justify-content:center;border-radius:10px;padding:14px 40px;">Add to Cart</button>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <form id="cart-form" method="POST" action="/go_to_cart" style="display:none;">
+                    <input id="cart-input" type="hidden" name="cart" value="">
+                </form>
+                <div style="text-align:center;">
+                    <button class="button" onclick="goToCart()">Go to Cart</button>
+                </div> 
+                <!-- start single product -->
+
+                <!-- start single product -->
+                <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800" class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="product-style-one no-overlay">
+                        <div class="card-thumbnail">
+                            <a href="product-details.html"><img src="assets/images/portfolio/portfolio-03.jpg" alt="NFT_portfolio"></a>
+                        </div>
+                        <div class="product-share-wrapper">
+                        </div>
+                        <a href="product-details.html"><span class="product-name">OrBid6</span></a>
+                        <span class="latest-bid">Highest bid 2/31</span>
+                        <div class="bid-react-area">
+                            <div class="last-bid">0.2128wETH</div>
+                            <div class="react-area">
+                                <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
+                                    <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
+                                </svg>
+                                <span class="number">12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single product -->
+
+                <!-- start single product -->
+                <div data-sal="slide-up" data-sal-delay="300" data-sal-duration="800" class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="product-style-one no-overlay">
+                        <div class="card-thumbnail">
+                            <a href="product-details.html"><img src="assets/images/portfolio/portfolio-02.jpg" alt="NFT_portfolio"></a>
+                        </div>
+                        <div class="product-share-wrapper">
+                        </div>
+                        <a href="product-details.html"><span class="product-name">Morgan11</span></a>
+                        <span class="latest-bid">Highest bid 3/16</span>
+                        <div class="bid-react-area">
+                            <div class="last-bid">0.265wETH</div>
+                            <div class="react-area">
+                                <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
+                                    <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
+                                </svg>
+                                <span class="number">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single product -->
+
+                <!-- start single product -->
+                <div data-sal="slide-up" data-sal-delay="350" data-sal-duration="800" class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="product-style-one no-overlay">
+                        <div class="card-thumbnail">
+                            <a href="product-details.html"><img src="assets/images/portfolio/portfolio-05.jpg" alt="NFT_portfolio"></a>
+                        </div>
+                        <div class="product-share-wrapper">
+                        </div>
+                        <a href="product-details.html"><span class="product-name">mAtal8</span></a>
+                        <span class="latest-bid">Highest bid 6/50</span>
+                        <div class="bid-react-area">
+                            <div class="last-bid">0.244wETH</div>
+                            <div class="react-area">
+                                <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
+                                    <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
+                                </svg>
+                                <span class="number">205</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single product -->
+            </div>
+        </div> 
+    </div>
+    <!-- collection area End -->
+    <!-- Modal -->
+    <div class="rn-popup-modal share-modal-wrapper modal fade" id="shareModal" tabindex="-1" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content share-wrapper">
+                <div class="modal-header share-area">
+                    <h5 class="modal-title">Share this NFT</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="social-share-default">
+                        <li><a href="#"><span class="icon"><i data-feather="facebook"></i></span><span class="text">facebook</span></a></li>
+                        <li><a href="#"><span class="icon"><i data-feather="twitter"></i></span><span class="text">twitter</span></a></li>
+                        <li><a href="#"><span class="icon"><i data-feather="linkedin"></i></span><span class="text">linkedin</span></a></li>
+                        <li><a href="#"><span class="icon"><i data-feather="instagram"></i></span><span class="text">instagram</span></a></li>
+                        <li><a href="#"><span class="icon"><i data-feather="youtube"></i></span><span class="text">youtube</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="rn-popup-modal report-modal-wrapper modal fade" id="reportModal" tabindex="-1" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content report-content-wrapper">
+                <div class="modal-header report-modal-header">
+                    <h5 class="modal-title">Why are you reporting?
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <p>Describe why you think this item should be removed from marketplace</p>
+                    <div class="report-form-box">
+                        <h6 class="title">Message</h6>
+                        <textarea name="message" placeholder="Write issues"></textarea>
+                        <div class="report-button">
+                            <button type="button" class="btn btn-primary mr--10 w-auto">Report</button>
+                            <button type="button" class="btn btn-primary-alta w-auto" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer Area -->
+    <div class="rn-footer-one rn-section-gap bg-color--1 mt--100 mt_md--80 mt_sm--80">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="widget-content-wrapper">
+                        <div class="footer-left">
+                            <div class="logo-thumbnail logo-custom-css">
+                                <a class="logo-light" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                                <a class="logo-dark" href="home"><img src="{{url_for('static',filename='assets/images/logo/logo.jpg')}}" alt="nft-logo"></a>
+                            </div>
+                            <p class="rn-footer-describe">
+                                Created with the collaboration of over 60 of the world's best Nuron Artists.
+                            </p>
+                        </div>
+                        <div class="widget-bottom mt--40 pt--40">
+                            <h6 class="title">Get The Latest Nuron Updates </h6>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-color--2" placeholder="Your username" aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary-alta btn-outline-secondary" type="button">Subscribe</button>
+                                </div>
+                            </div>
+                            <div class="newsletter-dsc">
+                                <p>Email is safe. We don't spam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_mobile--40">
+                    <div class="footer-widget widget-quicklink">
+                        <h6 class="widget-title">TrisestDevet</h6>
+                        <ul class="footer-list-one">
+                            <li class="single-list"><a href="home">Home</a></li>
+                            <li class="single-list"><a href="login">Login</a></li>
+                            <li class="single-list"><a href="register">Sign up</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                    <div class="footer-widget widget-information">
+                        <h6 class="widget-title">Information</h6>
+                        <ul class="footer-list-one">
+                            <li class="single-list"><a href="#">Terms and condition</a></li>
+                            <li class="single-list"><a href="#">Privacy Policy</a></li>
+                            <li class="single-list"><a href="#">Main Option</a></li>
+                            <li class="single-list"><a href="about">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Area -->
+    <!-- Start Footer Area -->
+    <div class="copy-right-one ptb--20 bg-color--1">
+        
+    </div>
+    <!-- End Footer Area -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- Start Top To Bottom Area  -->
+    <div class="rn-progress-parent">
+        <svg class="rn-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- End Top To Bottom Area  -->
+    <!-- JS ============================================ -->
+    <script>
+        var buyNowButton = document.getElementById("buy-now-button");
+        var allBoxes = document.getElementsByClassName("box");
+    
+        buyNowButton.addEventListener("click", function() {
+            for (var i = 0; i < allBoxes.length; i++) {
+                var box = allBoxes[i];
+                var selectButton = box.querySelector(".button");
+                if (buyNowButton.classList.contains("active")) {
+                    // Show all boxes if the button is no longer active
+                    box.style.display = "block";
+                } else {
+                    // Show only boxes with a select button if the button is active
+                    if (selectButton) {
+                        box.style.display = "block";
+                    } else {
+                        box.style.display = "none";
+                    }
+                }
+            }
+    
+            // Toggle the active class on the button
+            buyNowButton.classList.toggle("active");
+            // Toggle the button text
+            if (buyNowButton.classList.contains("active")) {
+                buyNowButton.textContent = "All Slots ";
+            } else {
+                buyNowButton.textContent = "Available Slots ";
+            }
+        });
+    </script>
+
+    <script>
+        var cart = [];
+        var cartBadge = document.getElementById('cart-badge');
+    
+        function toggleCart(box_id) {
+            var button = document.getElementById('box' + box_id).querySelector('.button');
+    
+            if (button.innerText === "Add to Cart") {
+                cart.push(box_id);
+                button.innerText = "Remove from Cart";
+                button.style.backgroundColor = "red";
+            } else {
+                cart.splice(cart.indexOf(box_id), 1);
+                button.innerText = "Add to Cart";
+                button.style.backgroundColor = "green";
+            }
+            updateCartInput();
+        }
+        function updateCartInput() {
+            var cartInput = document.getElementById('cart-input');
+            cartInput.value = cart.join(',');
+            if (cart.length > 0) {
+                document.getElementById('cart-form').style.display = 'block';
+            } else {
+                document.getElementById('cart-form').style.display = 'none';
+            }
+            cartBadge.innerText = cart.length;
+        }
+    
+        function goToCart() {
+            var selectedBoxIds = "";
+            for (var i = 0; i < cart.length; i++) {
+                selectedBoxIds += cart[i] + ", ";
+            }
+            selectedBoxIds = selectedBoxIds.slice(0, -2); // remove trailing comma and space
+            //alert("Selected box IDs: " + selectedBoxIds);
+            document.getElementById('cart-form').submit();
+        }
+    
+    </script>
+
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery.nice-select.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery-ui.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/modernizer.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/feather.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/slick.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/sal.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/particles.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery.style.swicher.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/js.cookie.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/count-down.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/isotop.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/imageloaded.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/backtoTop.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/odometer.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery-appear.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/scrolltrigger.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/jquery.custom-file-input.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/savePopup.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/vanilla.tilt.js')}}"></script>
+
+    <!-- main JS -->
+    <script src="{{url_for('static',filename='assets/js/main.js')}}"></script>
+    <!-- Meta Mask  -->
+    <script src="{{url_for('static',filename='assets/js/vendor/web3.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/vendor/maralis.js')}}"></script>
+    <!--<script src="{{url_for('static',filename='assets/js/vendor/nft.js')}}"></script>-->
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Anil z" name="author">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SITE TITLE -->
+
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/cart/images/favicon.png')}}">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/animate.css')}}">	
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/bootstrap/css/bootstrap.min.css')}}">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/all.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/ionicons.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/themify-icons.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/linearicons.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/simple-line-icons.css')}}">
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/owlcarousel/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/owlcarousel/css/owl.theme.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/owlcarousel/css/owl.theme.default.min.css')}}">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/magnific-popup.css')}}">
+<!-- jquery-ui CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/jquery-ui.css')}}">
+<!-- Slick CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/slick.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/slick-theme.css')}}">
+<!-- Style CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/style.css')}}">
+<link rel="stylesheet" href="assets1/css/responsive.css">
+<!-- RTL CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/cart/css/rtl-style.css')}}">
+
+</head>
+
+<body dir="rtl">
+
+<!-- LOADER -->
+
+<!-- END LOADER -->
+
+<!-- Home Popup Section -->
+
+<!-- End Screen Load Popup Section --> 
+
+<!-- START HEADER -->
+
+<!-- END HEADER -->
+
+
+
+<!-- START MAIN CONTENT -->
+<div class="main_content">
+
+<!-- START SECTION SHOP -->
+<div class="section">
+	<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive shop_cart_table">
+                	<table class="table">
+                    	<thead>
+                            <tr>
+                                <th class="product-remove">Remove</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-image">Image</th>
+                                <th class="product-link">Link</th>
+                                <th class="slots">Slots</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <form methos="post" enctype="multipart/form-data"
+                                {% for box_id in selected_box_ids %}
+                                    <tr id="cart-row-{{ box_id }}">
+                                        <td class="product-remove" data-title="Remove">
+                                            <button class="remove-button" onclick="removeFromCart('{{ box_id }}', {{ loop.index0 }})">
+                                                <i calss="ti=close"></i>
+                                            </button>
+                                        </td>
+                                        <td class="product-price" data-title="Price">369 Rs </td>
+                                        <td class="product-image" data-title="Images">
+                                            <input type="file" name="product-image-{{ box_id }}[]" multiple>
+                                        </td>
+                                        <td class="product-link" data-title="Links">
+                                            <input type="text" name="product-link-{{ box_id }}[]" multiple>
+                                        </td>
+                                        <td class="slots" data-title="Slots">Slot {{ box_id }} </td>
+                                    </tr>
+                                {% endfor %}
+                            </form>
+                        </tbody> 
+                        <tfoot>
+                        	<tr>
+                            	<td colspan="6" class="px-0">
+                                	<div class="row g-0 align-items-center">
+
+                                    	<div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+                                            <div class="coupon field_form input-group">
+                                                <input type="text" value="" class="form-control form-control-sm" placeholder="Enter Coupon Code..">
+                                                <div class="input-group-append">
+                                                	<button class="btn btn-fill-out btn-sm" type="submit">Apply Coupon</button>
+                                                </div>
+                                            </div>
+                                    	</div>
+                                        <div class="col-lg-8 col-md-6  text-start  text-md-end">
+                                            <button class="btn btn-line-fill btn-sm" type="submit">Update Cart</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+            	<div class="medium_divider"></div>
+            	<div class="divider center_icon"><i class="ti-shopping-cart-full"></i></div>
+            	<div class="medium_divider"></div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+            	<div class="border p-3 p-md-4">
+                    <div class="heading_s1 mb-3">
+                        <h6>Cart Totals</h6>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="cart_total_label">Cart Subtotal</td>
+                                    <td class="cart_total_amount">
+                                        {%set total_price = selected_box_ids|length * 369 %}
+                                        {{ total_price }} Rs 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cart_total_label">Shipping</td>
+                                    <td class="cart_total_amount">Free Shipping</td>
+                                </tr>
+                                <tr>
+                                    <td class="cart_total_label">Total</td>
+                                    <td class="cart_total_amount"><strong>{{ total_price}} Rs </strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="submit" class="btn btn-fill-out" name="buy-now" onclick="redirectTovendorProfile()">Buy Now</button>
+                </div>
+                
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!-- END SECTION SHOP -->
+
+
+
+</div>
+<!-- END MAIN CONTENT -->
+
+<!-- START FOOTER -->
+
+<!-- END FOOTER -->
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+
+
+<script>
+function redirectTovendorProfile(){
+    window.location.href = "vendorprofile";
+}
+</script>
+
+<script>
+
+    function removeFromCart(box_id, index) {
+        // Remove box ID from selected_box_ids array
+        //selected_box_ids.splice(selected_box_ids.indexOf(box_id), 1);
+    
+        // Remove row from cart table
+        var row = document.getElementById('cart-row-' + box_id);
+        row.parentNode.removeChild(row);
+
+        // Delete the boxid from selected_boxids
+        selected_box_ids.splice(index, 1);
+    }    
+
+</script>
+
+<!-- Latest jQuery --> 
+<script src="{{url_for('static',filename='assets/cart/js/jquery-3.6.0.min.js')}}"></script> 
+<!-- jquery-ui --> 
+<script src="{{url_for('static',filename='assets/cart/js/jquery-ui.js')}}"></script>
+<!-- popper min js -->
+<script src="{{url_for('static',filename='assets/cart/js/popper.min.js')}}"></script>
+<!-- Latest compiled and minified Bootstrap --> 
+<script src="{{url_for('static',filename='assets/cart/bootstrap/js/bootstrap.min.js')}}"></script> 
+<!-- owl-carousel min js  --> 
+<script src="{{url_for('static',filename='assets/cart/owlcarousel/js/owl.carousel.min.js')}}"></script> 
+<!-- magnific-popup min js  --> 
+<script src="{{url_for('static',filename='assets/cart/js/magnific-popup.min.js')}}"></script> 
+<!-- waypoints min js  --> 
+<script src="{{url_for('static',filename='assets/cart/js/waypoints.min.js')}}"></script> 
+<!-- parallax js  --> 
+<script src="{{url_for('static',filename='assets/cart/js/parallax.js')}}"></script> 
+<!-- countdown js  --> 
+<script src="{{url_for('static',filename='assets/cart/js/jquery.countdown.min.js')}}"></script> 
+<!-- imagesloaded js --> 
+<script src="{{url_for('static',filename='assets/cart/js/imagesloaded.pkgd.min.js')}}"></script>
+<!-- isotope min js --> 
+<script src="{{url_for('static',filename='assets/cart/js/isotope.min.js')}}"></script>
+<!-- jquery.dd.min js -->
+<script src="{{url_for('static',filename='assets/cart/js/jquery.dd.min.js')}}"></script>
+<!-- slick js -->
+<script src="{{url_for('static',filename='assets/cart/js/slick.min.js')}}"></script>
+<!-- elevatezoom js -->
+<script src="{{url_for('static',filename='assets/cart/js/jquery.elevatezoom.js')}}"></script>
+<!-- scripts js --> 
+<script src="{{url_for('static',filename='assets/cart/js/scripts.js')}}"></script>
+
+</body>
+</html>

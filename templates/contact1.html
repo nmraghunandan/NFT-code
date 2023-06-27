@@ -1,0 +1,320 @@
+{% extends 'headerFooter.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Contact Us</title>
+
+  <!-- ::::::::::::::Favicon icon::::::::::::::-->
+  <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.ico')}}" type="image/png">
+
+  <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/icofont.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/jquery-ui.min.css')}}">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/swiper-bundle.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/animate.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/venobox.min.css')}}">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+  <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+  <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+</head>
+
+<body>
+<main></main>
+    <!-- ...::: Start Breadcrumb Section :::... -->
+    <div class="breadcrumb-section breadcrumb-bg">
+      <div class="box-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="container text-center">
+                <h2 class="title">Contact Us</h2>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start Breadcrumb Shape -->
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-1 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-2 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-3 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-4 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-fill breadcrumb-shape-fill-1 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-fill breadcrumb-shape-fill-2 animate-zoom-in-out"></div>
+      <!-- End Breadcrumb Shape -->
+    </div>
+    <!-- ...::: End Breadcrumb Section :::... -->
+
+    <!-- ...::: Start Contact Section :::... -->
+    <div class="contact-section">
+      <div class="box-wrapper contact-box-wrapper">
+
+        <!-- Start Map -->
+        <div class="map-box">
+         
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.260842586626!2d77.6571637140789!3d13.019054317359554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae115ab3b8c6c7%3A0x7e2a249153a8a1ac!2sALTACARE%20MEDI%20SOLUTION%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1669960868789!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- End Map -->
+
+        <!-- Start Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info-single-item">
+            <h4 class="title">Contact</h4>
+            <div class="contact-address">
+              <address class="contact-address-single-item">
+                  <span class="icon"><i class="icofont-google-map"></i></span>
+                  <span class="text">Address: ALTACARE MEDI SOLUTION PVT LTD 12,   Munireddy  layout.HORAMAVU, 2nd  main BANGALORE 560 043.</span>
+              </address>
+
+              <a href="tel:+91 952 199 2299" class="contact-address-single-item">
+                  <span class="icon"><i class="icofont-phone"></i></span>
+                  <span class="text">+91 952 199 2299</span>
+              </a>
+
+              <a href="mailto:demo@example.com" class="contact-address-single-item">
+                  <span class="icon"><i class="icofont-envelope"></i></span>
+                  <span class="text">care@altacaresolutions.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-info-single-item">
+            <h4 class="title">Follow Us</h4>
+            <ul class="social-link-2">
+              <li>
+                <a href="https://example.com/" target="_blank">
+                  <span class="icon"><i class="icofont-facebook"></i></span>
+                  <span class="text">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://example.com/" target="_blank">
+                  <span class="icon"><i class="icofont-twitter"></i></span>
+                  <span class="text">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://example.com/" target="_blank">
+                  <span class="icon"><i class="icofont-instagram"></i></span>
+                  <span class="text">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Contact Info -->
+
+        <!-- Start Book Form -->
+        <div class="book-form book-form-3">
+          <h3 class="title">Need our help?<span>You can contact us today</span></h3>
+          <form id="contact-form" class="default-form-group" action="assets/mail/contact.php" method="post">
+            <div class="row mb-n20">
+              <div class="col-12 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-dark-gray">
+                  <input name="name" type="text" placeholder="Your name" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+              </div>
+              <div class="col-12 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-dark-gray">
+                  <input name="email" type="email" placeholder="Your email" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+              </div>
+              <div class="col-12 col-sm-6 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-dark-gray">
+                  <input name="subject" type="text" placeholder="Subject" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+              </div>
+              <div class="col-12 col-sm-6 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-dark-gray">
+                  <input type="text" id="datepicker" placeholder="Date" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+              </div>
+              <div class="col-12 mb-20">
+                <div class="default-form-group-single-item border-dark-gray">
+                  <textarea name="message" rows="4" placeholder="Write you present condition..." required></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="submit-btn text-center">
+              <button type="submit" class="btn btn-lg btn-default-alt btn-animate icon-space-left"><span> Send Now <i class="icofont-double-right"></i></span></button>
+            </div>
+            <p class="form-messege"></p>
+          </form>
+        </div>
+        <!-- End Book Form -->
+
+      </div>
+    </div>
+      <!-- ...::: End Contact Section :::... -->
+
+    <!-- ...::: Start Footer Section :::... 
+    <footer class="footer-section section-top-gap-200">
+      -- Start Footer Top Area ----
+      <div class="footer-top-area section-inner-padding-200">
+        <div class="footer-top-shape">
+          <img class="img-width" src="assets/images/background/footer-shape-bg.png" alt="">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-top-box-wrapper">
+                --- Start Footer About ---
+                <div class="footer-top-single-item footer-about">
+                  <a href="index.html" class="logo">
+                    <img class="img-fluid" src="https://i.ibb.co/xG583gs/logo.png" alt="" width="100" height="100">
+                  </a>
+                  <p>"ALTACARE MEDI SOLUTION" is India's leading provider of long term healthcare management for patient with several chronic illness.</p>
+                  <form action="#" class="footer-form" method="post">
+                    <input type="email" placeholder="Enter email" required>
+                    <button type="submit">Subscribe <i class="icofont-double-right"></i></button>
+                  </form>
+                </div>
+                ---- End Footer About ---
+                ---- Start Footer Widget ----
+                <div class="footer-top-single-item footer-menu footer-widget">
+                  <h4 class="title">Services</h4>
+
+                  <ul class="footer-nav">
+                     <li><a href="nursing-services.html">Nursing Services</a></li>
+					<li><a href="caretaker-services.html">Caretaker Services</a></li>
+					<li><a href="newborn-services.html">Newborn, Mothercare</a></li>
+					<li><a href="short-term-services.html">Short Term Services</a></li>
+					<li><a href="critical-care-services.html">Critical Care</a></li>
+					<li><a href="diabetic-care-services.html">Diabetic Care</a></li>
+					
+                  </ul>
+                </div>
+                ---- End Footer Widget ----
+                ---- Start Footer Widget ---
+                <div class="footer-top-single-item footer-social footer-widget">
+                  <h4 class="title">Follow Us</h4>
+
+                  <ul class="social-link-2">
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-facebook"></i></span>
+                        <span class="text">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-twitter"></i></span>
+                        <span class="text">Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-instagram"></i></span>
+                        <span class="text">Instagram</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                --- End Footer Widget --
+                --- Start Footer Widget ---
+                <div class="footer-top-single-item footer-contact footer-widget">
+                  <h4 class="title">Contact</h4>
+
+                  <div class="footer-info">
+                    <address class="footer-single-info">
+                      <span class="icon"><i class="icofont-google-map"></i></span>
+                      <span class="text">Address:  12,   Munireddy  layout.HORAMAVU, 2nd  mainBANGALORE 560 043.</span>
+                    </address>
+                    <a href="tel:+91 952 199 2299" class="footer-single-info">
+                      <span class="icon"><i class="icofont-phone"></i></span>
+                      <span class="text">+91 952 199 2299</span>
+                    </a>
+                    <a href="mailto:care@altacaresolutions.co." class="footer-single-info">
+                      <span class="icon"><i class="icofont-envelope"></i></span>
+                      <span class="text">care@altacaresolutions.com</span>
+                    </a>
+                  </div>
+                </div>
+                --- End Footer Widget ---
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      --- End Footer Top Area ---
+
+      ---- Start Footer BottomArea ----
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="copyright-text text-center">
+                &copy; 2022 <a class="mark-color" href="index.html">ALTACARE MEDI SOLUTION PVT LTD </a>. Powered By <a target="_blank" rel="noopener"
+                  href="https://jellies-ai.com" class="company-site"> Jellies-ai </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      --- End Footer Bottom Area---
+    </footer>
+    < ...::: End Footer Section :::... ---
+
+    --- material-scrolltop button ----
+    <button class="material-scrolltop" type="button"></button>
+  </main>
+
+  --- ::::::::::::::All JS Files here :::::::::::::: ---
+  ---- Global Vendor, plugins JS -->
+  <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/vendor/jquery-migrate-3.3.3.min.js"></script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/jquery-ui.min.js"></script>
+
+  <!--Plugins JS-->
+  <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+  <script src="assets/js/plugins/circle-progress.min.js"></script>
+  <script src="assets/js/plugins/ajax-mail.js"></script>
+  <script src="assets/js/plugins/venobox.min.js"></script>
+  <script src="assets/js/plugins/material-scrolltop.js"></script>
+
+
+  <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+  <!-- <script src="assets/js/vendor/vendor.min.js"></script>
+  <script src="assets/js/plugins/plugins.min.js"></script> -->
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+   <?php include 'whatsapp.php';?>
+
+</body>
+
+</html>
+
+{% endblock %}

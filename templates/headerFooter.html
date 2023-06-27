@@ -1,0 +1,212 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Contact Us - Altacare Medi Solution</title>
+
+  <!-- ::::::::::::::Favicon icon::::::::::::::-->
+  <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.ico')}}" type="image/png">
+
+  <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/icofont.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/vendor/jquery-ui.min.css')}}">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/swiper-bundle.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/animate.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/plugins/venobox.min.css')}}">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+  <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+  <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+</head>
+
+<body>
+
+  <main class="main-wrapper">
+    <!-- .....:::::: Start Header Section :::::.... -->
+    <header class="header-section sticky-header d-none d-xl-block section-fluid-185">
+      <div class="header-wrapper">
+        <div class="container-fluid">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <!-- Start Header Logo -->
+              <a href="index.html" class="header-logo">
+                <img src="https://i.ibb.co/xG583gs/logo.png" width="100" height="100" alt="">
+              </a>
+              <!-- End Header Logo -->
+            </div>
+            <div class="col-auto d-flex align-items-center">
+              <!-- Start Header Menu -->
+              <ul class="header-nav">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="contact">Contact </a></li>
+                <li><a href="login">Login</a></li>
+                <li><a href="register">Sign up</a></li>
+              </ul>
+              <!-- End Header Menu -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}
+
+
+    {% endblock %}
+
+    <footer class="footer-section section-top-gap-200">
+      <!-- Start Footer Top Area -->
+      <div class="footer-top-area section-inner-padding-200">
+        <div class="footer-top-shape">
+          <img class="img-width" src="https://i.ibb.co/996qgXW/loo-removebg-preview55-removebg-preview.png" alt="">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-top-box-wrapper">
+                <!-- Start Footer About -->
+                <div class="footer-top-single-item footer-about">
+                  <a href="index.html" class="logo">
+                    <img class="img-fluid" src="https://i.ibb.co/xG583gs/logo.png" alt="" width="100" height="100">
+                  </a>
+                  <p>"Altacare Medi Solution " is India's leading provider of long term healthcare management for patient with several chronic illness.</p>
+                  <form action="#" class="footer-form" method="post">
+                    <input type="email" placeholder="Enter email" required>
+                    <button type="submit">Subscribe <i class="icofont-double-right"></i></button>
+                  </form>
+                </div>
+                <!-- End Footer About -->
+                <!-- Start Footer Widget -->
+                <div class="footer-top-single-item footer-menu footer-widget">
+                  <h4 class="title">Services</h4>
+
+                  <ul class="footer-nav">
+                     <li><a href="nursing-services.html">Nursing Services</a></li>
+<li><a href="caretaker-services.html">Caretaker Services</a></li>
+<li><a href="newborn-services.html">Newborn, Mothercare</a></li>
+<li><a href="short-term-services.html">Short Term Services</a></li>
+<li><a href="critical-care-services.html">Critical Care</a></li>
+<li><a href="diabetic-care-services.html">Diabetic Care</a></li>
+                  </ul>
+                </div>
+                <!-- End Footer Widget -->
+                <!-- Start Footer Widget -->
+                <div class="footer-top-single-item footer-social footer-widget">
+                  <h4 class="title">Follow Us</h4>
+
+                  <ul class="social-link-2">
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-facebook"></i></span>
+                        <span class="text">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-twitter"></i></span>
+                        <span class="text">Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://example.com/" target="_blank">
+                        <span class="icon"><i class="icofont-instagram"></i></span>
+                        <span class="text">Instagram</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Footer Widget -->
+                <!-- Start Footer Widget -->
+                <div class="footer-top-single-item footer-contact footer-widget">
+                  <h4 class="title">Contact</h4>
+
+                  <div class="footer-info">
+                    <address class="footer-single-info">
+                      <span class="icon"><i class="icofont-google-map"></i></span>
+                      <span class="text">Address: 12, Munireddy layout. HORAMAVU, 2nd main BANGALORE 560 043.</span>
+                    </address>
+                    <a href="tel:+91 952 199 2299" class="footer-single-info">
+                      <span class="icon"><i class="icofont-phone"></i></span>
+                      <span class="text">+91 952 199 2299</span>
+                    </a>
+                    <a href=" care@altacaresolutions.co." class="footer-single-info">
+                      <span class="icon"><i class="icofont-envelope"></i></span>
+                      <span class="text"> care@altacaresolutions.com</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- End Footer Widget -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer Top Area -->
+
+      <!-- Start Footer BottomArea -->
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="copyright-text text-center">
+                &copy; 2022 <a class="mark-color" href="index.html">Altacare Medi Solution Pvt. Ltd.</a>. Powered By <a target="_blank" rel="noopener"
+                  href="https://jellies-ai.com" class="company-site"> Jellies-ai </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer Bottom Area-->
+    </footer>
+    <!-- ...::: End Footer Section :::... -->
+     <!-- material-scrolltop button -->
+     <button class="material-scrolltop" type="button"></button>
+    </main>
+  
+    <!-- ::::::::::::::All JS Files here :::::::::::::: -->
+    <!-- Global Vendor, plugins JS -->
+    <script src="{{url_for('static',filename='js/vendor/modernizr-3.11.2.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/vendor/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/vendor/jquery-migrate-3.3.3.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/vendor/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/vendor/jquery-ui.min.js')}}"></script>
+  
+    <!--Plugins JS-->
+    <script src="{{url_for('static',filename='js/plugins/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins/circle-progress.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins/ajax-mail.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins/venobox.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins/material-scrolltop.js')}}"></script>
+  
+  
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script> -->
+  
+    <!-- Main JS -->
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    
+    
+    
+    <!-- whatsapp code -->
+    
+    
+ <!--  <a target="_blank" href="https://api.whatsapp.com/send?phone=9521992299&text=" class="whatsapp-button">-->
+              <i class="fab fa-whatsapp"></i></a>
+              <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+              <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+    
+  </body>
